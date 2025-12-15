@@ -6,6 +6,7 @@ import org.example.entities.Train;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -15,46 +16,66 @@ import java.util.stream.IntStream;
 public class TrainService {
 
     private List<Train> trainList;
-    private ObjectMapper objectMapper = new ObjectMapper();
-    private static final String TRAIN_DB_PATH = "../localDB/trains.json";
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
+
+    private static final String TRAIN_DB_PATH =
+            "app/src/main/java/org/example/localDb/trains.json";
 
     public TrainService() throws IOException {
-        File trains = new File(TRAIN_DB_PATH);
-        trainList = objectMapper.readValue(trains, new TypeReference<List<Train>>() {});
+        File trainsFile = new File(TRAIN_DB_PATH);
+
+        if (!trainsFile.exists()) {
+            trainList = new ArrayList<>();
+            objectMapper.writeValue(trainsFile, trainList);
+        } else {
+            trainList = objectMapper.readValue(
+                    trainsFile,
+                    new TypeReference<List<Train>>() {}
+            );
+        }
     }
 
+    //  SEARCH
     public List<Train> searchTrains(String source, String destination) {
-        return trainList.stream().filter(train -> validTrain(train, source, destination)).collect(Collectors.toList());
+
+        String src = source.trim().toLowerCase();
+        String dest = destination.trim().toLowerCase();
+
+        return trainList.stream()
+                .filter(train -> validTrain(train, src, dest))
+                .collect(Collectors.toList());
     }
 
+    //  ADD / UPDATE
     public void addTrain(Train newTrain) {
-        // Check if a train with the same trainId already exists
+
         Optional<Train> existingTrain = trainList.stream()
-                .filter(train -> train.getTrainId().equalsIgnoreCase(newTrain.getTrainId()))
+                .filter(t -> t.getTrainId().equalsIgnoreCase(newTrain.getTrainId()))
                 .findFirst();
 
         if (existingTrain.isPresent()) {
-            // If a train with the same trainId exists, update it instead of adding a new one
             updateTrain(newTrain);
         } else {
-            // Otherwise, add the new train to the list
             trainList.add(newTrain);
             saveTrainListToFile();
         }
     }
 
     public void updateTrain(Train updatedTrain) {
-        // Find the index of the train with the same trainId
+
         OptionalInt index = IntStream.range(0, trainList.size())
-                .filter(i -> trainList.get(i).getTrainId().equalsIgnoreCase(updatedTrain.getTrainId()))
+                .filter(i ->
+                        trainList.get(i)
+                                .getTrainId()
+                                .equalsIgnoreCase(updatedTrain.getTrainId())
+                )
                 .findFirst();
 
         if (index.isPresent()) {
-            // If found, replace the existing train with the updated one
             trainList.set(index.getAsInt(), updatedTrain);
             saveTrainListToFile();
         } else {
-            // If not found, treat it as adding a new train
             addTrain(updatedTrain);
         }
     }
@@ -63,16 +84,23 @@ public class TrainService {
         try {
             objectMapper.writeValue(new File(TRAIN_DB_PATH), trainList);
         } catch (IOException e) {
-            e.printStackTrace(); // Handle the exception based on your application's requirements
+            e.printStackTrace();
         }
     }
 
-    private boolean validTrain(Train train, String source, String destination) {
-        List<String> stationOrder = train.getStations();
+    // CORE ROUTE LOGIC
+    private boolean validTrain(Train train, String src, String dest) {
 
-        int sourceIndex = stationOrder.indexOf(source.toLowerCase());
-        int destinationIndex = stationOrder.indexOf(destination.toLowerCase());
+        List<String> stationsLower = train.getStations()
+                .stream()
+                .map(String::toLowerCase)
+                .collect(Collectors.toList());
 
-        return sourceIndex != -1 && destinationIndex != -1 && sourceIndex < destinationIndex;
+        int sourceIndex = stationsLower.indexOf(src);
+        int destinationIndex = stationsLower.indexOf(dest);
+
+        return sourceIndex != -1
+                && destinationIndex != -1
+                && sourceIndex < destinationIndex;
     }
 }
