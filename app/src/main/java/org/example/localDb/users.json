@@ -1,1 +1,36 @@
-[{"name":"Rahul Deb","password":null,"hashed_password":"$2a$10$examplehashedpasswordstring","tickets_booked":[{"ticket_id":"TCKT-001","user_id":null,"source":"Bangalore","destination":"Delhi","date_of_travel":"2025-12-14T16:14:00Z","train":{"train_id":"TR-101","train_no":"12345","seats":[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],"station_times":{"Bangalore":"13:50:45","Jaipur":"18:23:54","Delhi":"22:22:23"},"stations":null,"train_info":"Train ID: TR-101 Train No: 12345"},"ticket_info":"Ticket ID: TCKT-001 belongs to User null from Bangalore to Delhi on 2025-12-14T16:14:00Z"}],"user_id":"12345"},{"name":"rahuldeb","password":"iamgadha69@R","hashed_password":"$2a$10$o9kSBEEeQv3fsyBbJid/Qe3b/qAlMLx.oRFHEbhnOqB/XK8ehJGZi","tickets_booked":[],"user_id":"ee71d6ee-40df-4834-875f-776688aa1334"}]
+[
+  {
+    "user_id": "USR-001",
+    "name": "Rahul Deb",
+    "hashed_password": "$2a$10$SAMPLEHASHEDPASSWORD1234567890",
+    "tickets_booked": [
+      {
+        "ticket_id": "TCKT-1001",
+        "source": "Bangalore",
+        "destination": "Delhi",
+        "date_of_travel": "2025-12-14T16:14:00Z",
+        "train": {
+          "train_id": "TR-001",
+          "train_no": "12951",
+          "seats": [
+            [1, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ],
+          "station_times": {
+            "Bangalore": "06:30:00",
+            "Jaipur": "15:45:00",
+            "Delhi": "22:30:00"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "user_id": "USR-002",
+    "name": "Demo User",
+    "hashed_password": "$2a$10$ANOTHERFAKEHASHEDPASSWORD098765",
+    "tickets_booked": []
+  }
+]
