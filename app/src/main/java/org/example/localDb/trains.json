@@ -1,42 +1,182 @@
 [
   {
-    "train_id": "whok",
-    "train_no": "12345",
-    "seats": [
-      [0,0,0,0,0,0],
-      [0,0,0,0,0,0],
-      [0,0,0,0,0,0],
-      [0,0,0,0,0,0]
-    ],
+    "train_id": "TR-001",
+    "train_no": "12951",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
     "station_times": {
-      "Bangalore": "13:50:45",
-      "Jaipur": "13:23:54",
-      "Delhi": "22:22:23"
+      "Bangalore": "06:30:00",
+      "Hyderabad": "11:45:00",
+      "Nagpur": "18:20:00",
+      "Delhi": "07:15:00"
     },
-    "stations": [
-      "bangalore",
-      "jaipur",
-      "Delhi"
-    ]
+    "stations": ["Bangalore","Hyderabad","Nagpur","Delhi"]
   },
   {
-    "train_id": "abcd",
-    "train_no": "12345",
-    "seats": [
-      [0,0,0,0,0,0],
-      [0,0,0,0,0,0],
-      [0,0,0,0,0,0],
-      [0,0,0,0,0,0]
-    ],
+    "train_id": "TR-002",
+    "train_no": "12303",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
     "station_times": {
-      "Bangalore": "13:50:45",
-      "Jaipur": "13:23:54",
-      "Delhi": "22:22:23"
+      "Kolkata": "08:00:00",
+      "Asansol": "10:10:00",
+      "Patna": "15:40:00",
+      "Delhi": "23:55:00"
     },
-    "stations": [
-      "bangalore",
-      "jaipur",
-      "Delhi"
-    ]
+    "stations": ["Kolkata","Asansol","Patna","Delhi"]
+  },
+  {
+    "train_id": "TR-003",
+    "train_no": "19019",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Mumbai": "05:45:00",
+      "Surat": "09:30:00",
+      "Vadodara": "11:15:00",
+      "Ahmedabad": "13:00:00"
+    },
+    "stations": ["Mumbai","Surat","Vadodara","Ahmedabad"]
+  },
+  {
+    "train_id": "TR-004",
+    "train_no": "12841",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Chennai": "06:00:00",
+      "Nellore": "08:10:00",
+      "Vijayawada": "13:40:00",
+      "Visakhapatnam": "21:15:00"
+    },
+    "stations": ["Chennai","Nellore","Vijayawada","Visakhapatnam"]
+  },
+  {
+    "train_id": "TR-005",
+    "train_no": "15960",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Dibrugarh": "07:00:00",
+      "Jorhat": "09:10:00",
+      "Guwahati": "15:30:00",
+      "Kolkata": "06:40:00"
+    },
+    "stations": ["Dibrugarh","Jorhat","Guwahati","Kolkata"]
+  },
+  {
+    "train_id": "TR-006",
+    "train_no": "12423",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "New Delhi": "16:50:00",
+      "Jaipur": "21:10:00",
+      "Ahmedabad": "08:20:00",
+      "Mumbai": "13:30:00"
+    },
+    "stations": ["New Delhi","Jaipur","Ahmedabad","Mumbai"]
+  },
+  {
+    "train_id": "TR-007",
+    "train_no": "12155",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Bhopal": "06:15:00",
+      "Jhansi": "10:30:00",
+      "Agra": "13:45:00",
+      "Delhi": "17:40:00"
+    },
+    "stations": ["Bhopal","Jhansi","Agra","Delhi"]
+  },
+  {
+    "train_id": "TR-008",
+    "train_no": "15658",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Silchar": "05:30:00",
+      "Lumding": "09:20:00",
+      "Guwahati": "14:00:00",
+      "New Jalpaiguri": "04:15:00"
+    },
+    "stations": ["Silchar","Lumding","Guwahati","New Jalpaiguri"]
+  },
+  {
+    "train_id": "TR-009",
+    "train_no": "11077",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Pune": "07:10:00",
+      "Solapur": "11:30:00",
+      "Kalaburagi": "15:40:00",
+      "Hyderabad": "20:10:00"
+    },
+    "stations": ["Pune","Solapur","Kalaburagi","Hyderabad"]
+  },
+  {
+    "train_id": "TR-010",
+    "train_no": "22416",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Visakhapatnam": "06:40:00",
+      "Rajahmundry": "10:00:00",
+      "Vijayawada": "13:20:00",
+      "Chennai": "20:00:00"
+    },
+    "stations": ["Visakhapatnam","Rajahmundry","Vijayawada","Chennai"]
+  },
+  {
+    "train_id": "TR-011",
+    "train_no": "13159",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Kolkata": "22:15:00",
+      "Bardhaman": "00:10:00",
+      "Malda": "05:30:00",
+      "Guwahati": "18:40:00"
+    },
+    "stations": ["Kolkata","Bardhaman","Malda","Guwahati"]
+  },
+  {
+    "train_id": "TR-012",
+    "train_no": "12002",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Bhopal": "17:30:00",
+      "Gwalior": "20:40:00",
+      "Agra": "22:30:00",
+      "Delhi": "00:45:00"
+    },
+    "stations": ["Bhopal","Gwalior","Agra","Delhi"]
+  },
+  {
+    "train_id": "TR-013",
+    "train_no": "16535",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Mysuru": "07:00:00",
+      "Bangalore": "10:00:00",
+      "Tumakuru": "12:30:00",
+      "Hubballi": "19:15:00"
+    },
+    "stations": ["Mysuru","Bangalore","Tumakuru","Hubballi"]
+  },
+  {
+    "train_id": "TR-014",
+    "train_no": "11092",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Varanasi": "04:50:00",
+      "Prayagraj": "08:10:00",
+      "Kanpur": "11:45:00",
+      "Lucknow": "14:00:00"
+    },
+    "stations": ["Varanasi","Prayagraj","Kanpur","Lucknow"]
+  },
+  {
+    "train_id": "TR-015",
+    "train_no": "22738",
+    "seats": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    "station_times": {
+      "Secunderabad": "18:10:00",
+      "Nizamabad": "21:20:00",
+      "Adilabad": "02:10:00",
+      "Nagpur": "07:45:00"
+    },
+    "stations": ["Secunderabad","Nizamabad","Adilabad","Nagpur"]
   }
 ]
